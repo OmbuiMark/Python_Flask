@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add/Update</title>
+</head>
+<body>
+    <h1>Add/Update Driver or Team Information</h1>
+    <form action="/add_update" method="post">
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="driver">Driver</option>
+            <option value="team">Team</option>
+        </select><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="information">Information:</label>
+        <textarea id="information" name="information" required></textarea><br><br>
+        <label for="attribute">Attribute:</label>
+        <select id="attribute" name="attribute">
+            <option value="speed">Speed</option>
+            <option value="handling">Handling</option>
+            <option value="braking">Braking</option>
+            <option value="acceleration">Acceleration</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'welcome.css')}}">
+	<link rel="stylesheet" type="text/css" href="../static/welcome.css">
+</head>
+<body>
+<div class="main">
+	<h1 class="name">Hi, {{name}}</h1><hr style="width: 30%">
+	<h3 class="email">{{email}}</h3>
+	<form action="{{url_for('logout')}}" method="post">
+		<button class="green-btn" type="submit">Logout</button>
+	</form>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <a href="/add_update" class="btn btn-primary">Add/Update Information</a>
+    </div>
+    <div class="col-md-4">
+        <a href="/compare" class="btn btn-primary">Compare Teams/Drivers</a>
+    </div>
+    <div class="col-md-4">
+        <a href="/filter" class="btn btn-primary">Filter Data</a>
+    </div>
+</div>
+
+</body>
+</html>

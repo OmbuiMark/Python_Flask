@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Results</title>
+</head>
+<body>
+    <h1>Filter Results</h1>
+    {% if driver_team %}
+        <p>Showing all {{ driver_team }} with {{ attribute }} of {{ value }}:</p>
+    {% else %}
+        <p>Showing {{ data_list|length }} result(s) for "{{ attribute }} = {{ value }}"</p>
+    {% endif %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Information</th>
+            <th>Attribute</th>
+        </tr>
+        {% for data in data_list %}
+            <tr>
+                <td>{{ data[0] }}</td>
+                <td>{{ data[1] }}</td>
+                <td>{{ data[2] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

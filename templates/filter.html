@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Data</title>
+</head>
+<body>
+    <h1>Filter Data</h1>
+    {% if error_message %}
+        <p style="color:red">{{ error_message }}</p>
+    {% endif %}
+    <form action="/filter" method="post">
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="driver">Driver</option>
+            <option value="team">Team</option>
+        </select><br><br>
+        <input type="radio" id="filter_by_name" name="filter_option" value="name">
+        <label for="filter_by_name">Filter by Name</label><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <input type="submit" value="Filter">
+    </form>
+</body>
+</html>
