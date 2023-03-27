@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare</title>
+</head>
+<body>
+    <h1>Compare Drivers or Teams</h1>
+    {% if error_message %}
+        <p style="color:red">{{ error_message }}</p>
+    {% endif %}
+    <form action="/compare" method="post">
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="driver">Driver</option>
+            <option value="team">Team</option>
+        </select><br><br>
+        <label for="first">First Name:</label>
+        <input type="text" id="first" name="first" required><br><br>
+        <label for="second">Second Name:</label>
+        <input type="text" id="second" name="second" required><br><br>
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
